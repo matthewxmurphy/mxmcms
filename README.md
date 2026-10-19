@@ -1,117 +1,52 @@
-# MXMCMS: AI-Powered Multi-Tenant CMS for Web & Marketing Automation
+# MXMCMS — proposal
 
-![MXMCMS Logo](https://via.placeholder.com/728x90.png?text=MXMCMS+AI+CMS) <!-- Replace with actual logo URL -->
+**Concept documentation; no installable CMS or released product is present.**
 
-[![GitHub license](https://img.shields.io/github/license/yourusername/mxmcms)](https://github.com/yourusername/mxmcms/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/mxmcms?style=social)](https://github.com/yourusername/mxmcms/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/mxmcms)](https://github.com/yourusername/mxmcms/issues)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/mxmcms/actions) <!-- Update with real CI if set up -->
-[![Powered by Grav](https://img.shields.io/badge/Powered%20by-Grav-blueviolet)](https://getgrav.org)
+This repository records an early proposal for a CMS with multi-site publishing
+and marketing automation. Its tracked source does not contain Grav, a CMS fork,
+a tenant runtime, provisioning scripts, API endpoints, payment integration or an
+installer. No passing build, test suite, deployment or paid-service capability is
+established by this repository.
 
-**MXMCMS** (Multi-X Multi-CMS) is a forked and enhanced version of Grav CMS, transformed into an **API-first, AI-orchestrated multi-tenant platform** for launching web design firms, SEO/marketing agencies, and auxiliary online businesses. Built for scalability on Oracle Cloud's Always Free tier, it powers low-cost and high-dollar services with seamless AI automation – from site provisioning to content generation and social posting.
+The earlier README described possible features as implemented software and linked
+to placeholder badges, a placeholder logo and installation paths that do not
+exist here. This documentation corrects that status; the earlier concept remains
+available in Git history. Proposed prices and hosting/provider assumptions are
+not current offers or verified infrastructure.
 
-Target markets? We've got you: Cheapskates get $49.95 websites, while big spenders drop $999+ for premium vibes. All funnel to net30hosting.com for hosting upsells, with AI handling SEO, graphics, and cross-promotions. Client sites tie back to business credit services like Net30 Hosting, Net30 VoIP, and Net30 Websites for seamless affiliate loops. Think "OpenClaw" – a central AI rig clawing control over everything, bypassing costs internally and generating revenue externally.
+## Proposed direction
 
-🚀 **Why MXMCMS?** Automate your empire: Forkable themes, Brave-powered SEO, OpenAI graphics, social blasts (FB/X), and more – all under one roof.
+The proposed upstream is [Grav](https://github.com/getgrav/grav), the PHP flat-file
+CMS maintained in the official `getgrav/grav` repository. Grav core uses the
+[MIT license](https://github.com/getgrav/grav/blob/develop/LICENSE.txt).
+No Grav source is included here, no upstream revision has been selected, and
+MXMCMS is not an implemented Grav fork. Before importing code, select a reviewed
+upstream revision, preserve its copyright/license notice, and review the licenses
+of any included plugins, themes and dependencies.
 
-## Key Features
+Installable source, tenant isolation and authorization tests, reproducible setup,
+operational rollback and reviewed CI evidence are prerequisites to claiming a
+working platform or offering its CMS/tenant capabilities for paid delivery.
+No implementation roadmap is committed by this status correction.
 
-- **Multi-Firm Structure**:
-  - 2 Web Design Firms: Budget ($49.95) vs. Premium ($999) – unique frontends, shared backend.
-  - 2 Marketing Firms: Low-cost vs. High-dollar SEO, handling Twitter cards, OG tags, Facebook posts.
-  - Auxiliary Sites: Business credit portals (promoting Net30 services with affiliate ties), news sites with RSS feeds and auto-social posting (1¢/tweet budgeting via prepaid APIs).
-  - Client Sites: All tie back to business credit and hosting (e.g., upsells to Net30 Hosting for credit-building).
+## Attribution and licensing status
 
-- **AI-First Automation**:
-  - Central AI Rig ("OpenClaw"-style): Equipped with CUDA for LLMs, tunnels in via SSH/WireGuard to provision sites, generate content, optimize SEO via Brave API calls (from the rig), create graphics with OpenAI (DALL-E proxy from the rig), and post to X/Facebook.
-  - Daily SEO Updates: AI analyzes logs, implements changes on-the-fly.
-  - Random Portfolio Building: AI launches sites, adds to portfolios, bypasses internal costs.
+Author/developer: Matthew X Murphy, https://MatthewxMurphy.com. Product attribution:
+https://builtnotbegged.com. Original proposal credit: Bold Tee Hub; its original
+text remains in Git history.
 
-- **API-Centric Design**:
-  - REST API for LLMs/AI Agents: CRUD sites, themes, SEO data, forms, graphics, social posts.
-  - Integrations: Stripe/PayPal payments, Google Places/Analytics, Cloudflare Turnstile, Brave Search (via AI Rig), OpenAI (via AI Rig), Facebook Graph, Twitter API.
+The original proposal identified MIT but supplied no LICENSE file. This change
+preserves that recorded statement; it does not relicense prior material, add a
+new license grant or select distribution terms for future custom software.
+Grav's license above applies to Grav, not to an implementation shipped here.
 
-- **Security Fortress**:
-  - SSH Keys Only (no passwords).
-  - CrowdSec + Fail2Ban for intrusion detection.
-  - OCI CLI for network-level firewalls.
-  - JWT/API Keys for secure AI interactions.
+## Maintenance
 
-- **Database & Deployment**:
-  - Flat-file core (Grav) with optional Oracle Free Tier DBs: Autonomous (metadata/logs), NoSQL (key-value), HeatWave (analytics).
-  - VHost/Certbot Automation: AI-managed SSL via Let's Encrypt.
-  - Free-Tier Friendly: Runs on Oracle VM with tunneling for AI rig access.
-
-- **Shared Resources**:
-  - Unified Outbound Email: hello@ for all.
-  - Form Approvals: Routed to AI/manager dashboard.
-  - Hosting Upsells: All sites recommend net30hosting.com, with ties to business credit services.
-
-## Architecture Overview
-
-MXMCMS starts as a single-site Grav install, evolving into multi-tenant magic:
-
-```mermaid
-graph TD
-    A[AI Rig: OpenClaw with CUDA/LLMs] -->|API Calls/Tunnel<br>Brave/OpenAI Proxies| B[MXMCMS Server on Oracle VM]
-    B --> C[Shared Grav Backend: Plugins/API/DB]
-    C --> D[Unique Themes: Cheap/Premium Firms]
-    C --> E[SEO/Marketing: Brave/OpenAI Integrations<br>(Handled via AI Rig)]
-    C --> F[Aux Sites: News/Business Credit<br>(Ties to Net30 Hosting)]
-    D --> G[Client Sites: $49.95 or $999<br>(Upsell Net30/Business Credit)]
-    E --> H[Social Posts: FB/X with Budgeting]
-    B --> I[Security: CrowdSec/Fail2Ban/OCI Firewall]
-    B --> J[DB Layer: Oracle Autonomous/NoSQL]
-```
-
-- **Backend**: Forked Grav with custom plugins for vhosts, Certbot, API endpoints.
-- **Frontend**: Forkable themes per firm/site – customize without touching core.
-- **AI Control**: Python scripts on rig call APIs for orchestration, with Brave/OpenAI handled directly from the rig's CUDA-powered setup.
-
-## Getting Started
-
-### Prerequisites
-- PHP 8+, Composer.
-- Oracle Cloud Account (Free Tier VM/DB).
-- API Keys: Brave, OpenAI, Stripe, PayPal, Facebook, Twitter, Cloudflare, Google.
-
-### Installation
-1. Clone the repo:
-   ```
-   git clone https://github.com/yourusername/mxmcms.git
-   cd mxmcms
-   ```
-2. Install Grav base:
-   ```
-   composer install
-   bin/grav install
-   ```
-3. Configure multi-site (edit `setup.php` for subdomains).
-4. Set up security:
-   - Install CrowdSec/Fail2Ban via scripts in `/bin/security/`.
-   - Configure OCI CLI: `oci setup config`.
-5. Add DB: Edit `user/config/system.yaml` for Oracle PDO connection.
-6. Deploy to Oracle VM: Rsync files, run Certbot hooks.
-
-### Development in VS Code
-- Open in VS Code: Use PHP extensions for IntelliSense.
-- Local Server: `bin/gpm server`.
-- API Testing: Use Postman to hit `/api/` endpoints.
-
-## Usage
-- **Provision a Site**: AI calls `/api/create-site?type=cheap&domain=example.com` – auto-vhost, theme, SSL, with business credit ties.
-- **Generate Graphics**: `/api/generate-graphics?prompt="Cool logo"` – proxies to OpenAI via AI Rig.
-- **SEO Update**: `/api/update-seo?site=example.com` – Uses Brave for data (from AI Rig), applies tags.
-- **Social Post**: `/api/social-post?platform=x&content="News update"&budget=0.01` – Posts with limits.
-
-Run AI rig scripts (Python) to automate: `python openclaw.py --provision random`.
-
-## Contributing
-Fork, PR, or open issues! We're building an AI empire – join the claw. 🦞
-
-## License
-MIT License – Fork Grav's open-source spirit. See [LICENSE](LICENSE) for details.
-
----
-
-Built with ❤️ by [Bold Tee Hub](https://x.com/boldteehub) | Stockton, CA | SuperGrok User | Feb 2026
+Source documentation only. There are no application tests or CI workflows to run
+in this snapshot. The [shared engineering SOP](https://github.com/matthewxmurphy/developer-standards/blob/main/docs/ENGINEERING-SOP.md)
+was reviewed for this change; engineering metadata, complete license/notices and
+portable checker integration remain adoption gaps. CI/branch enforcement and
+release/runtime acceptance have not been verified. The internal checker is not
+vendored into this public proposal repository. No release version, server,
+repository visibility or deployment is changed. Roll back this documentation
+with a scoped Git revert while preserving later work.
