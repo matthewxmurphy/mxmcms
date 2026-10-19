@@ -1,4 +1,4 @@
-# MXMCMS
+# MXMCMS — proposal
 
 **Concept documentation; no installable CMS or released product is present.**
 
@@ -16,31 +16,37 @@ not current offers or verified infrastructure.
 
 ## Proposed direction
 
-A future implementation could evaluate a suitable CMS upstream and separately
-scope multi-site publishing or automation. Grav was mentioned in the original
-concept, but no upstream source or fork relationship is established here. Select
-and document the actual upstream, license and notices before importing code.
+The proposed upstream is [Grav](https://github.com/getgrav/grav), the PHP flat-file
+CMS maintained in the official `getgrav/grav` repository. Grav core uses the
+[MIT license](https://github.com/getgrav/grav/blob/develop/LICENSE.txt).
+No Grav source is included here, no upstream revision has been selected, and
+MXMCMS is not an implemented Grav fork. Before importing code, select a reviewed
+upstream revision, preserve its copyright/license notice, and review the licenses
+of any included plugins, themes and dependencies.
 
 Installable source, tenant isolation and authorization tests, reproducible setup,
-operational rollback and reviewed CI evidence are prerequisites to describing a
-working platform. No feature or implementation roadmap is committed by this
-status correction.
+operational rollback and reviewed CI evidence are prerequisites to claiming a
+working platform or offering its CMS/tenant capabilities for paid delivery.
+No implementation roadmap is committed by this status correction.
 
 ## Attribution and licensing status
 
 Author/developer: Matthew X Murphy, https://MatthewxMurphy.com. Product attribution:
-https://builtnotbegged.com. The earlier concept referenced Bold Tee Hub; its
-original text remains in Git history.
+https://builtnotbegged.com. Original proposal credit: Bold Tee Hub; its original
+text remains in Git history.
 
-The earlier README asserted MIT but supplied no LICENSE file. This correction
-does not add a license grant or select distribution terms for future software;
-existing third-party ownership and notices must be preserved if code is added.
+The original proposal identified MIT but supplied no LICENSE file. This change
+preserves that recorded statement; it does not relicense prior material, add a
+new license grant or select distribution terms for future custom software.
+Grav's license above applies to Grav, not to an implementation shipped here.
 
 ## Maintenance
 
 Source documentation only. There are no application tests or CI workflows to run
-in this snapshot. The shared engineering SOP was reviewed for this change;
-engineering metadata, full license/notices, portable checker integration and
-release/runtime verification remain adoption gaps. No release version, server,
+in this snapshot. The [shared engineering SOP](https://github.com/matthewxmurphy/developer-standards/blob/main/docs/ENGINEERING-SOP.md)
+was reviewed for this change; engineering metadata, complete license/notices and
+portable checker integration remain adoption gaps. CI/branch enforcement and
+release/runtime acceptance have not been verified. The internal checker is not
+vendored into this public proposal repository. No release version, server,
 repository visibility or deployment is changed. Roll back this documentation
 with a scoped Git revert while preserving later work.
